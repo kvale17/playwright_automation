@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@cucumber/cucumber": "^10.3.0",
     "@playwright/test": "^1.40.1",
     "@types/node": "^20.11.3"
   }
