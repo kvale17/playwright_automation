@@ -1,4 +1,6 @@
-const { test, expect } = require("@playwright/test");
+const { test } = require("@playwright/test");
+const { Catalog } = require("./pageobjects/Catalog");
+
 const productName = "Proteus Fitness Jackshirt";
 
 test.beforeEach(async ({ page }) => {
@@ -7,25 +9,17 @@ test.beforeEach(async ({ page }) => {
 
 test("Can add a product to the cart", async ({ page }) => {
   //Go to Men's Jackets
-  await page.getByRole("menuitem", { name: " Men" }).hover();
-  await page.getByRole("menuitem", { name: "Tops" }).hover();
-  await page.getByRole("menuitem", { name: "Jackets" }).click();
+  const catalog = new Catalog(page);
+  await catalog.goToCatalog("Men", "Tops", "Jackets");
 
-  //Add product to cart
-  const product = page.locator(`.product-item-info:has-text(${productName})`);
-  await product.getByRole("option", { name: "XS" }).click();
-  await product.getByRole("option", { name: "Black" }).click();
-  await product.getByRole("button", { name: "Add to Cart" }).click();
+  //Add product to the cart
+  catalog.addProductToCart(productName, "XS", "Black");
 
   //Assert mini cart count is 1
 
-  await expect(page.locator(".counter-number")).toHaveText("1");
+  await catalog.assertMiniCartCount(1);
 
   //Assert product is in the cart
 
-  await page.locator(".showcart").click();
-
-  const miniCartDialog = page.locator(".block-minicart");
-
-  await expect(miniCartDialog.locator(".product-item-name")).toHaveText(productName);
+  await catalog.assertProductInCart(productName);
 });
