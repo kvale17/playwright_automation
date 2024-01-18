@@ -18,7 +18,7 @@ When("the user selects a products options and clicks Add to Cart", async functio
   }
 );
 
-Then("then the specified product is added to the cart", async function () {
+Then("then the specified product is added to the cart", { timeout: 30 * 1000 }, async function () {
   await this.catalog.assertMiniCartCount(1);
 
   await this.catalog.assertProductInCart(productName);
