@@ -13,7 +13,7 @@ test("Can add a product to the cart", async ({ page }) => {
   await catalog.goToCatalog("Men", "Tops", "Jackets");
 
   //Add product to the cart
-  catalog.addProductToCart(productName, "XS", "Black");
+  await catalog.addProductToCart(productName, "XS", "Black");
 
   //Assert mini cart count is 1
 

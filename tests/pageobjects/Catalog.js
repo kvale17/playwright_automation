@@ -5,7 +5,7 @@ class Catalog {
   }
 
   async addProductToCart(name, size, color) {
-    const product = this.page.locator(`.product-item-info:has-text('${name}')`);
+    const product = await this.page.locator(`.product-item-info:has-text('${name}')`);
 
     await product.getByRole("option", { name: size }).click();
     await product.getByRole("option", { name: color }).click();
