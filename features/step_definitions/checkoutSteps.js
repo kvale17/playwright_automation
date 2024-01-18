@@ -14,7 +14,7 @@ Given(
 );
 
 When("the user selects a products options and clicks Add to Cart", async function () {
-    this.catalog.addProductToCart(productName, "XS", "Black");
+    await this.catalog.addProductToCart(productName, "XS", "Black");
   }
 );
 
