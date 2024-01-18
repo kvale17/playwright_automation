@@ -13,6 +13,8 @@ class Catalog {
   }
 
   async assertMiniCartCount(count) {
+    await this.page.locator(".counter-label span").waitFor();
+
     await expect(this.page.locator(".counter-number")).toHaveText(
       count.toString()
     );
