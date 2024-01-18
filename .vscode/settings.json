@@ -1,0 +1,12 @@
+{
+    "cucumberautocomplete.steps": [
+        "features/step_definitions/*.js",
+    ],
+    "cucumberautocomplete.strictGherkinCompletion": true,
+    "cucumberautocomplete.strictGherkinValidation": true,
+    "editor.quickSuggestions": {
+        "comments": false,
+        "strings": true,
+        "other": true
+    },
+}
