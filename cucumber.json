@@ -1,0 +1,17 @@
+{
+    "default": {
+        "formatOptions": {
+            "snippetInterface": "async-await"
+        },
+        "paths": [
+            "features"
+        ],
+        "require": [
+            "features/step_definitions/*.js",
+            "features/support/hooks.js"
+        ],
+        "format": [
+            "html:test-results/cucumber-report.html"
+        ]
+    }
+}
