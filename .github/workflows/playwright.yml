@@ -20,6 +20,7 @@ jobs:
       - name: Run Playwright Mocha tests
         run: npm run mocha
       - name: Run Playwright Cucumber tests
+        if: always()
         run: npm run cucumber
       - name: Generate cucumber report
         if: ${{ always() }}
