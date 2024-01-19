@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cucumber": "npx cucumber-js --exit",
+    "generate-cucumber-report": "node features/support/report.js",
     "mocha": "npx playwright test --project chromium"
   },
   "keywords": [],
