@@ -11,7 +11,7 @@
             "features/support/hooks.js"
         ],
         "format": [
-            "html:test-results/cucumber-report.html"
+            "html:playwright-report/cucumber-report/cucumber-report.html"
         ]
     }
 }
