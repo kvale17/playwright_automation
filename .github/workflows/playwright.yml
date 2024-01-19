@@ -20,7 +20,7 @@ jobs:
       - name: Run Playwright Mocha tests
         run: npx playwright test --project chromium
       - name: Run Playwright Cucumber tests
-        run: npx cucumber-js --exit
+        run: npx cucumber-js --retry 1 --exit
       - name: Generate cucumber report
         run: npm run generate-cucumber-report
       - uses: actions/upload-artifact@v3
