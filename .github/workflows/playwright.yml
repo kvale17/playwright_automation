@@ -22,6 +22,7 @@ jobs:
       - name: Run Playwright Cucumber tests
         run: npm run cucumber
       - name: Generate cucumber report
+        if: ${{ always() }}
         run: npm run generate-cucumber-report
       - uses: actions/upload-artifact@v3
         if: always()
