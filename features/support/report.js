@@ -6,7 +6,7 @@ var options = {
   output: "playwright-report/cucumber-report/cucmber-report.html",
   reportSuiteAsScenarios: true,
   scenarioTimestamp: true,
-  launchReport: true,
+  launchReport: false,
   failedSummaryReport: true,
 };
 
