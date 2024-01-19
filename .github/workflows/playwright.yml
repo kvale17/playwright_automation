@@ -21,6 +21,8 @@ jobs:
         run: npx playwright test --project chromium
       - name: Run Playwright Cucumber tests
         run: npx cucumber-js --exit
+      - name: Generate cucumber report
+        run: npm run generate-cucumber-report
       - uses: actions/upload-artifact@v3
         if: always()
         with:
