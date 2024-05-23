@@ -1,7 +1,7 @@
 # Setup
 
 1. Clone the project
-2. Install dependencies ```npm install```
+2. Go to project directory and install dependencies ```npm install```
 
 
 # Run tests
