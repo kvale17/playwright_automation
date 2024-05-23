@@ -6,6 +6,7 @@
   "scripts": {
     "cucumber": "npx cucumber-js --retry 1 --exit",
     "generate-cucumber-report": "node features/support/report.js",
+    "open-cucumber-report": "open playwright-report/cucumber-report/cucumber-report.html",
     "mocha": "npx playwright test --project chromium"
   },
   "keywords": [],
@@ -15,6 +16,7 @@
     "@cucumber/cucumber": "^10.3.0",
     "@playwright/test": "^1.41.1",
     "@types/node": "^20.11.3",
-    "cucumber-html-reporter": "^7.1.1"
+    "cucumber-html-reporter": "^7.1.1",
+    "open": "^10.1.0"
   }
 }
