@@ -8,6 +8,7 @@
     "generate-cucumber-report": "node features/support/report.js",
     "open-cucumber-report": "open playwright-report/cucumber-report/cucumber-report.html",
     "run-cucumber-tests" : "npm run cucumber && npm run generate-cucumber-report && npm run open-cucumber-report",
+    "run-mocha-tests" : "npm run mocha && npx playwright show-report playwright-report/mocha-report",
     "mocha": "npx playwright test --project chromium"
   },
   "keywords": [],
